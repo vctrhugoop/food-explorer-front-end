@@ -1,3 +1,22 @@
 import styled from 'styled-components';
 
-export const AnchorContainer = styled.a``;
+export const AnchorContainer = styled.a`
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1px;
+    bottom: -5px;
+    left: 0;
+    background-color: ${({ theme }) => theme.COLORS.LIGHT['100']};
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+  }
+
+  &:hover::after {
+    width: 100%;
+    visibility: visible;
+  }
+`;
