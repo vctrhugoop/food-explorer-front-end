@@ -21,16 +21,13 @@ export default createGlobalStyle`
 
   body, input, button, textarea {
     font-family: ${({ theme }) => theme.FONTS.TITLE};
+    color: ${({ theme }) => theme.COLORS.LIGHT['100']};
+    border: none;
     outline: none;
   }
 
   a {
     text-decoration: none;
-  }
-
-  button {
-    border: none;
-    color: ${({ theme }) => theme.COLORS.LIGHT['100']};
   }
 
   button, a {
