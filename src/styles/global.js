@@ -24,6 +24,10 @@ export default createGlobalStyle`
     color: ${({ theme }) => theme.COLORS.LIGHT['100']};
     border: none;
     outline: none;
+
+    &:focus-visible {
+    outline: 1px solid ${({ theme }) => theme.COLORS.LIGHT['100']};
+  }
   }
 
   a {
