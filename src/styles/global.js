@@ -28,12 +28,13 @@ export default createGlobalStyle`
     text-decoration: none;
   }
 
+  button {
+    border: none;
+    color: ${({ theme }) => theme.COLORS.LIGHT['100']};
+  }
+
   button, a {
     cursor: pointer;
     transform: filter .2s;
-  }
-
-  button:hover, a:hover {
-    filter: brightness(.9);
   }
 `;
