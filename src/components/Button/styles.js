@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { fonts } from '../../styles/typography';
 
 export const ButtonContainer = styled.button`
   width: 100%;
@@ -9,7 +10,7 @@ export const ButtonContainer = styled.button`
 
   border-radius: 5px;
 
-  font-family: ${({ theme }) => theme.FONTS.TEXT};
+  ${fonts.POPPINS['100-medium']}
 
   &:hover {
     background-color: ${({ theme }) => theme.COLORS.TOMATO['200']};

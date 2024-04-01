@@ -42,8 +42,4 @@ export default {
       200: '#82F3FF',
     },
   },
-  FONTS: {
-    TITLE: 'Roboto, sans-serif',
-    TEXT: 'Poppins, sans-serif',
-  },
 };

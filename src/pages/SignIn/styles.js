@@ -1,4 +1,5 @@
 import { styled } from 'styled-components';
+import { fonts } from '../../styles/typography';
 
 export const SignInContainer = styled.div`
   width: 100%;
@@ -37,7 +38,7 @@ export const SignInContainer = styled.div`
       display: none;
       font-weight: 500;
       color: ${({ theme }) => theme.COLORS.LIGHT['100']};
-      font-family: ${({ theme }) => theme.FONTS.TEXT};
+      ${fonts.POPPINS['400-medium']}
     }
 
     div {

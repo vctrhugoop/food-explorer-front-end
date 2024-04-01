@@ -1,7 +1,10 @@
 import styled from 'styled-components';
+import { fonts } from '../../styles/typography';
 
 export const AnchorContainer = styled.a`
   position: relative;
+
+  ${fonts.POPPINS['100-medium']}
 
   &::after {
     content: '';

@@ -19,20 +19,23 @@ export default createGlobalStyle`
     -webkit-font-smoothing: antialiased;
   }
 
-  body, input, button, textarea {
-    font-family: ${({ theme }) => theme.FONTS.TITLE};
+ input, button, textarea {
     color: ${({ theme }) => theme.COLORS.LIGHT['100']};
     border: none;
     outline: none;
 
     &:focus-visible {
     outline: 1px solid ${({ theme }) => theme.COLORS.LIGHT['100']};
-  }
+    }
   }
 
   a {
     text-decoration: none;
   }
+  input, button, textarea {
+    
+  }
+
 
   button, a {
     cursor: pointer;
