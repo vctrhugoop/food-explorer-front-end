@@ -1,8 +1,10 @@
 import styled from 'styled-components';
 import { fonts } from '../../styles/typography';
 
-export const AnchorContainer = styled.a`
+export const AnchorLinkStyles = styled.a`
   position: relative;
+
+  color: ${({ theme }) => theme.COLORS.LIGHT['100']};
 
   ${fonts.POPPINS['100-medium']}
 

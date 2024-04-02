@@ -36,7 +36,6 @@ export default createGlobalStyle`
     
   }
 
-
   button, a {
     cursor: pointer;
     transform: filter .2s;
