@@ -1,5 +1,16 @@
-import { styled } from 'styled-components';
+import { keyframes, styled } from 'styled-components';
 import { fonts } from '../../styles/typography';
+
+const entry = keyframes`
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+`;
 
 export const SignUpContainer = styled.div`
   width: 100%;
@@ -47,6 +58,8 @@ export const SignUpContainer = styled.div`
       justify-content: center;
       align-items: center;
       gap: 3.2rem;
+
+      animation: ${entry} 0.5s ease-in-out;
     }
 
     div {

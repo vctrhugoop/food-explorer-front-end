@@ -4,7 +4,6 @@ import { Input } from '../../components/Input';
 import { Label } from '../../components/Label';
 import { SignUpContainer } from './styles';
 
-import { motion } from 'framer-motion';
 import { NavLink } from 'react-router-dom';
 import Logo from '../../assets/logo.png';
 
@@ -14,11 +13,7 @@ export function SignUp() {
       <div>
         <img src={Logo} />
         <form>
-          <motion.div
-            initial={{ opacity: 0, y: -50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-          >
+          <div>
             <h1>Crie sua conta</h1>
             <div>
               <Label>Seu nome</Label>
@@ -48,7 +43,7 @@ export function SignUp() {
             <NavLink to='/'>
               <AnchorLink>Já tenho uma conta</AnchorLink>
             </NavLink>
-          </motion.div>
+          </div>
         </form>
       </div>
     </SignUpContainer>
