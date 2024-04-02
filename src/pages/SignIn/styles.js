@@ -41,6 +41,14 @@ export const SignInContainer = styled.div`
       ${fonts.POPPINS['400-medium']}
     }
 
+    div:first-child {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 3.2rem;
+    }
+
     div {
       width: 100%;
       display: flex;

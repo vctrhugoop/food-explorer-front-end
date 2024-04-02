@@ -13,33 +13,36 @@ export function SignIn() {
     <SignInContainer>
       <div>
         <img src={Logo} />
-        <motion.form
-          initial={{ opacity: 0, y: -100 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-        >
-          <h1>Faça seu login</h1>
-          <div>
-            <Label>Email</Label>
-            <Input
-              placeholder='Exemplo: exemplo@exemplo.com.br'
-              type='email'
-              required
-            />
-          </div>
-          <div>
-            <Label>Senha</Label>
-            <Input
-              placeholder='No mínimo 6 caracteres'
-              type='password'
-              required
-            />
-          </div>
-          <Button>Entrar</Button>
-          <NavLink to='/register'>
-            <AnchorLink>Crie sua conta</AnchorLink>
-          </NavLink>
-        </motion.form>
+        <form>
+          <motion.div
+            initial={{ opacity: 0, y: -50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+          >
+            <h1>Faça seu login</h1>
+            <div>
+              <Label>Email</Label>
+              <Input
+                placeholder='Exemplo: exemplo@exemplo.com.br'
+                type='email'
+                required
+              />
+            </div>
+            <div>
+              <Label>Senha</Label>
+              <Input
+                placeholder='No mínimo 6 caracteres'
+                type='password'
+                required
+              />
+            </div>
+
+            <Button>Entrar</Button>
+            <NavLink to='/register'>
+              <AnchorLink>Crie sua conta</AnchorLink>
+            </NavLink>
+          </motion.div>
+        </form>
       </div>
     </SignInContainer>
   );
