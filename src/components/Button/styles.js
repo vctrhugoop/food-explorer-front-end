@@ -12,13 +12,13 @@ export const ButtonContainer = styled.button`
 
   ${fonts.POPPINS['100-medium']}
 
-  &:hover {
+  &:not(:disabled):hover {
     background-color: ${({ theme }) => theme.COLORS.TOMATO['200']};
   }
 
   &:disabled {
-    background-color: ${({ theme }) => theme.COLORS.TOMATO['400']};
-
     cursor: default;
+
+    opacity: 70%;
   }
 `;
