@@ -1,12 +1,11 @@
 import styled from 'styled-components';
-import { fonts } from '../../styles/typography';
 
 export const AnchorLinkStyles = styled.a`
   position: relative;
 
   color: ${({ theme }) => theme.COLORS.LIGHT['100']};
 
-  ${fonts.POPPINS['100-medium']}
+  ${({ theme }) => theme.FONTS.POPPINS['100-medium']}
 
   &::after {
     content: '';

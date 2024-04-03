@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { fonts } from '../../styles/typography';
 
 export const InputContainer = styled.input`
   width: 100%;
@@ -9,7 +8,7 @@ export const InputContainer = styled.input`
 
   background-color: ${({ theme }) => theme.COLORS.DARK['900']};
 
-  ${fonts.ROBOTO['100-regular']}
+  ${({ theme }) => theme.FONTS.ROBOTO['100-regular']}
 
   &::placeholder {
     color: ${({ theme }) => theme.COLORS.LIGHT['500']};

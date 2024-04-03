@@ -1,5 +1,4 @@
 import { keyframes, styled } from 'styled-components';
-import { fonts } from '../../styles/typography';
 
 const entry = keyframes`
   from {
@@ -49,7 +48,8 @@ export const SignInContainer = styled.div`
       display: none;
       font-weight: 500;
       color: ${({ theme }) => theme.COLORS.LIGHT['100']};
-      ${fonts.POPPINS['400-medium']}
+
+      ${({ theme }) => theme.FONTS.POPPINS['400-medium']}
     }
 
     div:first-child {
