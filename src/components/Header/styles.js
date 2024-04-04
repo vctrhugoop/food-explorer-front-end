@@ -20,7 +20,7 @@ export const HeaderContent = styled.div`
   @media screen and (min-width: 768px) {
     gap: 3.2rem;
 
-    padding: 5.6rem 0 2.4rem;
+    padding: 5.6rem 2rem 2.4rem;
   }
 `;
 
@@ -122,8 +122,6 @@ export const ButtonOrder = styled.button`
 
     background-color: ${({ theme }) => theme.COLORS.TOMATO['100']};
     border-radius: 5px;
-
-    padding: 0 3.2rem;
 
     span {
       display: none;

@@ -14,7 +14,7 @@ export const FooterContent = styled.div`
   width: 100%;
 
   margin: 0 auto;
-  padding: 0 2.8rem;
+  padding: 0 1.8rem;
 
   display: flex;
   align-items: center;
@@ -32,7 +32,7 @@ export const FooterContent = styled.div`
   }
 
   @media screen and (min-width: 768px) {
-    padding: 0;
+    padding: 0 2rem;
 
     img {
       width: 18.6rem;
