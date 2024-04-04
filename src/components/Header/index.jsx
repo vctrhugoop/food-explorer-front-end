@@ -9,6 +9,7 @@ import {
   SearchInput,
 } from './styles';
 
+import { NavLink } from 'react-router-dom';
 import Logo from '../../assets/logo.png';
 
 export function Header() {
@@ -19,7 +20,9 @@ export function Header() {
           <List size={32} />
         </ButtonMenu>
         <LogoContainer>
-          <img src={Logo} />
+          <NavLink to='/'>
+            <img src={Logo} />
+          </NavLink>
           <span>admin</span>
         </LogoContainer>
         <SearchInput>
