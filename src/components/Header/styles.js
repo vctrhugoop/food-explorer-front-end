@@ -61,6 +61,10 @@ export const SearchInput = styled.div`
   background-color: ${({ theme }) => theme.COLORS.DARK['900']};
   border-radius: 5px;
 
+  &:focus-within {
+    outline: 1px solid ${({ theme }) => theme.COLORS.LIGHT['100']};
+  }
+
   input {
     width: 34.4rem;
 
