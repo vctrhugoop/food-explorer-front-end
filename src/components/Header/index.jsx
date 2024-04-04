@@ -1,22 +1,40 @@
-import { List, Receipt } from '@phosphor-icons/react';
-import { HeaderContainer } from './styles';
+import { List, MagnifyingGlass, Receipt, SignOut } from '@phosphor-icons/react';
+import {
+  ButtonMenu,
+  ButtonOrder,
+  ButtonSignOut,
+  HeaderContainer,
+  HeaderContent,
+  LogoContainer,
+  SearchInput,
+} from './styles';
 
 import Logo from '../../assets/logo.png';
 
 export function Header() {
   return (
     <HeaderContainer>
-      <button>
-        <List size={32} />
-      </button>
-      <div>
-        <img src={Logo} />
-        <span>admin</span>
-      </div>
-      <button>
-        <Receipt size={32} />
-        <span>0</span>
-      </button>
+      <HeaderContent>
+        <ButtonMenu>
+          <List size={32} />
+        </ButtonMenu>
+        <LogoContainer>
+          <img src={Logo} />
+          <span>admin</span>
+        </LogoContainer>
+        <SearchInput>
+          <MagnifyingGlass size={24} />
+          <input placeholder='Busque por pratos ou ingredientes' />
+        </SearchInput>
+        <ButtonOrder>
+          <Receipt size={32} />
+          <p>Pedidos (0)</p>
+          <span>0</span>
+        </ButtonOrder>
+        <ButtonSignOut>
+          <SignOut size={32} />
+        </ButtonSignOut>
+      </HeaderContent>
     </HeaderContainer>
   );
 }
