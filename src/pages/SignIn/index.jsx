@@ -16,9 +16,10 @@ export function SignIn() {
           <div>
             <h1>Faça seu login</h1>
             <div>
-              <Label>Email</Label>
+              <Label for='email'>Email</Label>
               <Input
                 placeholder='Exemplo: exemplo@exemplo.com.br'
+                id='email'
                 type='email'
                 area-label='Email'
                 role='email'
@@ -26,9 +27,10 @@ export function SignIn() {
               />
             </div>
             <div>
-              <Label>Senha</Label>
+              <Label for='password'>Senha</Label>
               <Input
                 placeholder='No mínimo 6 caracteres'
+                id='password'
                 type='password'
                 area-label='Senha'
                 role='password'

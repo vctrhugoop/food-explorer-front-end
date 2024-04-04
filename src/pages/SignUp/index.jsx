@@ -16,9 +16,10 @@ export function SignUp() {
           <div>
             <h1>Crie sua conta</h1>
             <div>
-              <Label>Seu nome</Label>
+              <Label for='username'>Seu nome</Label>
               <Input
                 placeholder='Exemplo: Maria da Silva'
+                id='username'
                 type='text'
                 area-label='Nome'
                 role='Name'
@@ -26,9 +27,10 @@ export function SignUp() {
               />
             </div>
             <div>
-              <Label>Email</Label>
+              <Label for='email'>Email</Label>
               <Input
                 placeholder='Exemplo: exemplo@exemplo.com.br'
+                id='email'
                 type='email'
                 area-label='Email'
                 role='email'
@@ -36,9 +38,10 @@ export function SignUp() {
               />
             </div>
             <div>
-              <Label>Senha</Label>
+              <Label for='password'>Senha</Label>
               <Input
                 placeholder='No mínimo 6 caracteres'
+                id='password'
                 type='password'
                 area-label='Senha'
                 role='password'

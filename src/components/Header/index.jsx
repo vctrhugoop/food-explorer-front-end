@@ -27,8 +27,12 @@ export function Header() {
         </LogoContainer>
         <SearchInput>
           <MagnifyingGlass size={24} />
+          <label htmlFor='search' className='sr-only'>
+            Busque por pratos ou ingredientes
+          </label>
           <input
             placeholder='Busque por pratos ou ingredientes'
+            id='search'
             type='text'
             aria-label='Busca'
             role='search'
