@@ -27,7 +27,12 @@ export function Header() {
         </LogoContainer>
         <SearchInput>
           <MagnifyingGlass size={24} />
-          <input placeholder='Busque por pratos ou ingredientes' />
+          <input
+            placeholder='Busque por pratos ou ingredientes'
+            type='text'
+            aria-label='Busca'
+            role='search'
+          />
         </SearchInput>
         <ButtonOrder>
           <Receipt size={32} />

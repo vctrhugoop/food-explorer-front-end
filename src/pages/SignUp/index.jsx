@@ -20,6 +20,8 @@ export function SignUp() {
               <Input
                 placeholder='Exemplo: Maria da Silva'
                 type='text'
+                area-label='Nome'
+                role='Name'
                 required
               />
             </div>
@@ -28,6 +30,8 @@ export function SignUp() {
               <Input
                 placeholder='Exemplo: exemplo@exemplo.com.br'
                 type='email'
+                area-label='Email'
+                role='email'
                 required
               />
             </div>
@@ -36,6 +40,8 @@ export function SignUp() {
               <Input
                 placeholder='No mínimo 6 caracteres'
                 type='password'
+                area-label='Senha'
+                role='password'
                 required
               />
             </div>
