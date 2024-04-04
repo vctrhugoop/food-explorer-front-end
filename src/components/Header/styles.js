@@ -116,6 +116,15 @@ export const ButtonOrder = styled.button`
     justify-content: center;
   }
 
+  p {
+    display: none;
+    ${({ theme }) => theme.FONTS.POPPINS['100-medium']}
+  }
+
+  &:not(:disabled):hover {
+    background-color: ${({ theme }) => theme.COLORS.TOMATO['200']};
+  }
+
   @media screen and (min-width: 768px) {
     width: 30rem;
     height: 4.8rem;
@@ -132,11 +141,7 @@ export const ButtonOrder = styled.button`
     }
 
     p {
-      ${({ theme }) => theme.FONTS.POPPINS['100-medium']}
-    }
-
-    &:not(:disabled):hover {
-      background-color: ${({ theme }) => theme.COLORS.TOMATO['200']};
+      display: block;
     }
   }
 `;
