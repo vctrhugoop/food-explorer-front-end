@@ -18,14 +18,16 @@ export function Header() {
   const [openMenuMobile, setOpenMenuMobile] = useState(false);
 
   function handleToggleMenuMobile() {
-    setOpenMenuMobile((state) => !state);
+    setOpenMenuMobile(!openMenuMobile);
   }
 
   return (
     <>
-      {openMenuMobile ? (
-        <MenuMobile closeMenuMobile={handleToggleMenuMobile} />
-      ) : null}
+      <MenuMobile
+        closeMenuMobile={handleToggleMenuMobile}
+        isOpenMenu={openMenuMobile}
+        style={openMenuMobile ? 'display:none' : 'display:block'}
+      />
       <HeaderContainer>
         <HeaderContent>
           <ButtonMenu onClick={handleToggleMenuMobile}>

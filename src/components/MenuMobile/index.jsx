@@ -9,9 +9,9 @@ import {
   SearchInput,
 } from './styles';
 
-export function MenuMobile({ closeMenuMobile }) {
+export function MenuMobile({ closeMenuMobile, isOpenMenu }) {
   return (
-    <MenuMobileContainer>
+    <MenuMobileContainer isOpenMenu={isOpenMenu}>
       <MenuMobileHeader>
         <ButtonMenu onClick={closeMenuMobile}>
           <X size={24} />

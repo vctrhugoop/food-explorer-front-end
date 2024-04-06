@@ -1,4 +1,26 @@
-import { styled } from 'styled-components';
+import { keyframes, styled } from 'styled-components';
+
+const fadeIn = keyframes`
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+`;
+const fadeOut = keyframes`
+  
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+`;
 
 export const MenuMobileContainer = styled.div`
   position: absolute;
@@ -8,6 +30,11 @@ export const MenuMobileContainer = styled.div`
   height: calc(100vh - 7.7rem);
 
   background-color: ${({ theme }) => theme.COLORS.DARK['400']};
+
+  animation: ${({ isOpenMenu }) => (isOpenMenu ? fadeIn : fadeOut)} 0.3s
+    forwards;
+
+  pointer-events: ${({ $isOpen }) => ($isOpen ? 'auto' : 'none')};
 `;
 
 export const MenuMobileHeader = styled.header`
