@@ -66,7 +66,8 @@ export const SearchInput = styled.div`
   }
 
   input {
-    width: 34.4rem;
+    max-width: 34.4rem;
+    width: 100%;
 
     background-color: transparent;
     ${({ theme }) => theme.FONTS.ROBOTO['200-regular']}
@@ -88,6 +89,8 @@ export const SearchInput = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+
+    padding-inline: 2rem;
   }
 `;
 
@@ -125,8 +128,9 @@ export const ButtonOrder = styled.button`
     background-color: ${({ theme }) => theme.COLORS.TOMATO['200']};
   }
 
-  @media screen and (min-width: 768px) {
-    width: 30rem;
+  @media screen and (min-width: 1024px) {
+    max-width: 21.6rem;
+    width: 100%;
     height: 4.8rem;
     display: flex;
     align-items: center;
