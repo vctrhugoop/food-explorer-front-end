@@ -124,10 +124,6 @@ export const ButtonOrder = styled.button`
     ${({ theme }) => theme.FONTS.POPPINS['100-medium']}
   }
 
-  &:not(:disabled):hover {
-    background-color: ${({ theme }) => theme.COLORS.TOMATO['200']};
-  }
-
   @media screen and (min-width: 1024px) {
     max-width: 21.6rem;
     width: 100%;
@@ -146,6 +142,10 @@ export const ButtonOrder = styled.button`
 
     p {
       display: block;
+    }
+
+    &:not(:disabled):hover {
+      background-color: ${({ theme }) => theme.COLORS.TOMATO['200']};
     }
   }
 `;
