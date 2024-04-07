@@ -1,10 +1,10 @@
-import { Tag } from '../../components/Tag';
+import { QuantityInput } from '../../components/QuantityInput';
 import { HomeContainer } from './styles';
 
 export function Home() {
   return (
     <HomeContainer>
-      <Tag>ingrediente</Tag>
+      <QuantityInput />
     </HomeContainer>
   );
 }
