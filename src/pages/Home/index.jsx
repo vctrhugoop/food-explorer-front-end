@@ -1,9 +1,10 @@
+import { Tag } from '../../components/Tag';
 import { HomeContainer } from './styles';
 
 export function Home() {
   return (
     <HomeContainer>
-      <div>oi</div>
+      <Tag>ingrediente</Tag>
     </HomeContainer>
   );
 }

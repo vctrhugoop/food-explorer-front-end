@@ -1,5 +1,5 @@
 import { TagContainer } from './styles';
 
-export function Tag() {
-  return <TagContainer />;
+export function Tag({ children }) {
+  return <TagContainer>{children}</TagContainer>;
 }
