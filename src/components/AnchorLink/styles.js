@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const AnchorLinkStyles = styled.a`
+export const AnchorLinkStyles = styled.span`
   position: relative;
 
   color: ${({ theme }) => theme.COLORS.LIGHT['100']};
