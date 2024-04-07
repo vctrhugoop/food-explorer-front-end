@@ -32,6 +32,7 @@ export function MenuMobile({ closeMenuMobile, isOpenMenu }) {
             role='search'
           />
         </SearchInput>
+        <h3>Olá, Victor!</h3>
         <nav>
           <a>Sair</a>
         </nav>

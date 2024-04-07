@@ -24,9 +24,8 @@ export function Header() {
   return (
     <>
       <MenuMobile
-        closeMenuMobile={handleToggleMenuMobile}
         isOpenMenu={openMenuMobile}
-        style={openMenuMobile ? 'display:none' : 'display:block'}
+        closeMenuMobile={handleToggleMenuMobile}
       />
       <HeaderContainer>
         <HeaderContent>

@@ -1,40 +1,22 @@
-import { keyframes, styled } from 'styled-components';
-
-const fadeIn = keyframes`
-  from {
-    opacity: 0;
-    transform: translateX(-100%);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-`;
-const fadeOut = keyframes`
-  
-  from {
-    opacity: 1;
-    transform: translateX(0);
-  }
-  to {
-    opacity: 0;
-    transform: translateX(-100%);
-  }
-`;
+import { styled } from 'styled-components';
 
 export const MenuMobileContainer = styled.div`
   position: absolute;
-  z-index: 5;
+  z-index: 1000;
 
   width: 100%;
   height: calc(100vh - 7.7rem);
 
   background-color: ${({ theme }) => theme.COLORS.DARK['400']};
 
-  animation: ${({ isOpenMenu }) => (isOpenMenu ? fadeIn : fadeOut)} 0.3s
-    forwards;
+  transform: ${({ isOpenMenu }) =>
+    isOpenMenu ? 'translateX(0)' : 'translateX(-100%)'};
 
-  pointer-events: ${({ $isOpen }) => ($isOpen ? 'auto' : 'none')};
+  transition: transform 0.3s ease-in-out;
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
 `;
 
 export const MenuMobileHeader = styled.header`
@@ -64,6 +46,10 @@ export const MenuMobileContent = styled.div`
   flex-direction: column;
   gap: 3.6rem;
 
+  h3 {
+    ${({ theme }) => theme.FONTS.POPPINS['300-regular']};
+  }
+
   nav {
     padding: 1rem;
 
@@ -73,6 +59,8 @@ export const MenuMobileContent = styled.div`
       ${({ theme }) => theme.FONTS.POPPINS['300-regular']};
 
       font-weight: 300;
+
+      cursor: pointer;
     }
   }
 `;
@@ -85,7 +73,7 @@ export const SearchInput = styled.div`
   width: 100%;
   height: 4.8rem;
 
-  padding-inline: 1.4rem;
+  padding-left: 1.4rem;
 
   background-color: ${({ theme }) => theme.COLORS.DARK['900']};
   border-radius: 5px;
@@ -95,8 +83,8 @@ export const SearchInput = styled.div`
   }
 
   input {
-    max-width: 34.4rem;
     width: 100%;
+    height: 100%;
 
     background-color: transparent;
     ${({ theme }) => theme.FONTS.ROBOTO['200-regular']}
