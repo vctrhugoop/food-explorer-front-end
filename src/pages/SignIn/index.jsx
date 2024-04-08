@@ -7,7 +7,21 @@ import { SignInContainer } from './styles';
 import { NavLink } from 'react-router-dom';
 import Logo from '../../assets/logo.png';
 
+import { useState } from 'react';
+import { useAuth } from '../../hooks/auth';
+
 export function SignIn() {
+  const [email, setEmail] = useState(``);
+  const [password, setPassword] = useState(``);
+
+  const { signIn } = useAuth();
+
+  function handleSignIn(e) {
+    e.preventDefault();
+
+    signIn({ email, password });
+  }
+
   return (
     <SignInContainer>
       <div>
@@ -23,7 +37,7 @@ export function SignIn() {
                 type='email'
                 area-label='Email'
                 role='email'
-                required
+                onChange={(e) => setEmail(e.target.value)}
               />
             </div>
             <div>
@@ -34,11 +48,11 @@ export function SignIn() {
                 type='password'
                 area-label='Senha'
                 role='password'
-                required
+                onChange={(e) => setPassword(e.target.value)}
               />
             </div>
 
-            <Button>Entrar</Button>
+            <Button onClick={(e) => handleSignIn(e)}>Entrar</Button>
             <NavLink to='/register'>
               <AnchorLink>Crie sua conta</AnchorLink>
             </NavLink>
