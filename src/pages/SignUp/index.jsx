@@ -6,6 +6,8 @@ import { SignUpContainer } from './styles';
 
 import { useState } from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
+import { toast } from 'sonner';
+
 import Logo from '../../assets/logo.png';
 
 import { api } from '../../services/api';
@@ -20,23 +22,22 @@ export function SignUp() {
   function handleSignUp(e) {
     e.preventDefault();
 
-    console.log(name, email, password);
-
     if (!name || !email || !password) {
-      // TODO: add toast message
+      return toast.warning('Por favor, preencha todos os campos');
     }
+    console.log(name, email, password);
 
     api
       .post('/users', { name, email, password })
       .then(() => {
-        alert('Usuário cadastrado com sucesso');
+        toast.success('Usuário cadastrado com sucesso');
         navigate('/');
       })
       .catch((error) => {
         if (error.response) {
-          alert(error.response.data.message);
+          toast.error(error.response.data.message);
         } else {
-          alert('erro');
+          toast.error('Não foi possível');
         }
       });
   }
@@ -57,7 +58,6 @@ export function SignUp() {
                 area-label='Nome'
                 role='Name'
                 onChange={(e) => setName(e.target.value)}
-                required
               />
             </div>
             <div>
@@ -69,7 +69,6 @@ export function SignUp() {
                 area-label='Email'
                 role='email'
                 onChange={(e) => setEmail(e.target.value)}
-                required
               />
             </div>
             <div>
@@ -81,7 +80,6 @@ export function SignUp() {
                 area-label='Senha'
                 role='password'
                 onChange={(e) => setPassword(e.target.value)}
-                required
               />
             </div>
             <Button onClick={(e) => handleSignUp(e)}>Criar conta</Button>
