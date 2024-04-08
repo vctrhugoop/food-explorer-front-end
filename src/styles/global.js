@@ -7,6 +7,10 @@ export default createGlobalStyle`
     box-sizing: border-box;
   }
 
+  .my-toast{
+    padding: 1.6rem;
+  }
+
   :root {
     font-size: 62.5%;
   }
