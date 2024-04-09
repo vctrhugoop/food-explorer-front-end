@@ -60,7 +60,7 @@ export function Header() {
             <p>Pedidos (0)</p>
             <span>0</span>
           </ButtonOrder>
-          <ButtonSignOut onClick={SignOut}>
+          <ButtonSignOut onClick={signOut}>
             <SignOut size={32} />
           </ButtonSignOut>
         </HeaderContent>
