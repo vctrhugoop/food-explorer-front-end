@@ -9,7 +9,7 @@ import {
   SearchInput,
 } from './styles';
 
-export function MenuMobile({ closeMenuMobile, isOpenMenu }) {
+export function MenuMobile({ closeMenuMobile, isOpenMenu, signOut }) {
   return (
     <MenuMobileContainer isOpenMenu={isOpenMenu}>
       <MenuMobileHeader>
@@ -34,7 +34,7 @@ export function MenuMobile({ closeMenuMobile, isOpenMenu }) {
         </SearchInput>
         <h3>Olá, Victor!</h3>
         <nav>
-          <a>Sair</a>
+          <button onClick={signOut}>Sair</button>
         </nav>
       </MenuMobileContent>
     </MenuMobileContainer>

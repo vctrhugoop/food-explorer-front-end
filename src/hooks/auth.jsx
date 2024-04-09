@@ -4,7 +4,7 @@ import { api } from '../services/api';
 const AuthContext = createContext({});
 
 export function AuthProvider({ children }) {
-  const [data, setDate] = useState({});
+  const [data, setData] = useState({});
 
   async function signIn({ email, password }) {
     try {
@@ -16,7 +16,7 @@ export function AuthProvider({ children }) {
 
       api.defaults.headers.authorization = `Bearer ${token}`;
 
-      setDate({ user, token });
+      setData({ user, token });
     } catch (error) {
       if (error.response) {
         //TODO: add toast message
@@ -27,6 +27,13 @@ export function AuthProvider({ children }) {
     }
   }
 
+  function signOut() {
+    localStorage.removeItem('@foodexplorer:token');
+    localStorage.removeItem('@foodexplorer:user');
+
+    setData({});
+  }
+
   useEffect(() => {
     const token = localStorage.getItem('@foodexplorer:token');
     const user = localStorage.getItem('@foodexplorer:user');
@@ -34,7 +41,7 @@ export function AuthProvider({ children }) {
     if (token && user) {
       api.defaults.headers.authorization = `Bearer ${token}`;
 
-      setDate({
+      setData({
         token,
         user: JSON.parse(user),
       });
@@ -42,7 +49,7 @@ export function AuthProvider({ children }) {
   }, []);
 
   return (
-    <AuthContext.Provider value={{ signIn, user: data.user }}>
+    <AuthContext.Provider value={{ signIn, user: data.user, signOut }}>
       {children}
     </AuthContext.Provider>
   );

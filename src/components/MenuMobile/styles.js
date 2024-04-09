@@ -55,12 +55,14 @@ export const MenuMobileContent = styled.div`
 
     border-bottom: 1px solid ${({ theme }) => theme.COLORS.DARK['1000']};
 
-    a {
+    button {
       ${({ theme }) => theme.FONTS.POPPINS['300-regular']};
 
       font-weight: 300;
 
       cursor: pointer;
+
+      background-color: transparent;
     }
   }
 `;

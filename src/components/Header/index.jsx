@@ -14,7 +14,10 @@ import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import Logo from '../../assets/logo.png';
 
+import { useAuth } from '../../hooks/auth';
+
 export function Header() {
+  const { signOut } = useAuth();
   const [openMenuMobile, setOpenMenuMobile] = useState(false);
 
   function handleToggleMenuMobile() {
@@ -26,6 +29,7 @@ export function Header() {
       <MenuMobile
         isOpenMenu={openMenuMobile}
         closeMenuMobile={handleToggleMenuMobile}
+        signOut={signOut}
       />
       <HeaderContainer>
         <HeaderContent>
@@ -56,7 +60,7 @@ export function Header() {
             <p>Pedidos (0)</p>
             <span>0</span>
           </ButtonOrder>
-          <ButtonSignOut>
+          <ButtonSignOut onClick={SignOut}>
             <SignOut size={32} />
           </ButtonSignOut>
         </HeaderContent>
