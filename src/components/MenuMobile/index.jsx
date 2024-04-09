@@ -32,7 +32,6 @@ export function MenuMobile({ closeMenuMobile, isOpenMenu, signOut }) {
             role='search'
           />
         </SearchInput>
-        <h3>Olá, Victor!</h3>
         <nav>
           <button onClick={signOut}>Sair</button>
         </nav>
