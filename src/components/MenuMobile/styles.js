@@ -5,7 +5,7 @@ export const MenuMobileContainer = styled.div`
   z-index: 1000;
 
   width: 100%;
-  height: calc(100vh - 7.7rem);
+  height: 100vh;
 
   background-color: ${({ theme }) => theme.COLORS.DARK['400']};
 
