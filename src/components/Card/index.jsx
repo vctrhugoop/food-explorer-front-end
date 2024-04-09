@@ -9,7 +9,7 @@ export function Card({ dishes }) {
         <div key={dish.id}>
           <img src={dish.imageURL} />
           <p>{dish.name}</p>
-          <p>{dish.description}</p>
+          <p>{dish.category}</p>
           <p>{dish.price}</p>
         </div>
       ))}

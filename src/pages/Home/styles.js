@@ -7,7 +7,7 @@ export const HomeContainer = styled.div`
   margin: 0 auto;
 `;
 
-export const HeroContainer = styled.main`
+export const HeroContainer = styled.section`
   width: 100%;
 
   margin: 4.4rem 0 6.2rem;
@@ -42,10 +42,18 @@ export const HeroContent = styled.div`
   div {
     width: 20.2rem;
 
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    color: ${({ theme }) => theme.COLORS.LIGHT['300']};
+
     h1 {
       ${({ theme }) => theme.FONTS.POPPINS['100-medium']}
       font-size: 1.8rem;
       font-weight: 600;
+      line-height: 140%;
     }
 
     p {

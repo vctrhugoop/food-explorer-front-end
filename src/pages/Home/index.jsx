@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { HeroContainer, HeroContent, HomeContainer } from './styles';
 
+import { Card } from '../../components/Card';
 import { api } from '../../services/api';
 
 import heroImg from '../../assets/hero-img.png';
@@ -31,7 +32,7 @@ export function Home() {
         </HeroContent>
       </HeroContainer>
 
-      {/* <Card {...{ dishes }} /> */}
+      <Card {...{ dishes }} />
     </HomeContainer>
   );
 }
