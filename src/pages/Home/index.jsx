@@ -1,8 +1,9 @@
 import { useEffect, useState } from 'react';
-import { HomeContainer } from './styles';
+import { HeroContainer, HeroContent, HomeContainer } from './styles';
 
-import { Card } from '../../components/Card';
 import { api } from '../../services/api';
+
+import heroImg from '../../assets/hero-img.png';
 
 export function Home() {
   const [dishes, setDishes] = useState([]);
@@ -20,7 +21,17 @@ export function Home() {
 
   return (
     <HomeContainer>
-      <Card {...{ dishes }} />
+      <HeroContainer>
+        <HeroContent>
+          <img src={heroImg} />
+          <div>
+            <h1>Sabores inigualáveis</h1>
+            <p>Sinta o cuidado do preparo com ingredientes selecionados.</p>
+          </div>
+        </HeroContent>
+      </HeroContainer>
+
+      {/* <Card {...{ dishes }} /> */}
     </HomeContainer>
   );
 }
