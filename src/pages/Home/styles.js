@@ -70,11 +70,35 @@ export const HeroContent = styled.div`
   }
 
   @media screen and (min-width: 768px) {
-    height: 26rem;
+    height: 16rem;
 
     padding: 10rem;
 
     align-items: center;
+    justify-content: center;
+
+    img {
+      width: 40rem;
+      left: -3rem;
+    }
+
+    div {
+      width: 42.1rem;
+      right: 0;
+
+      h1 {
+        ${({ theme }) => theme.FONTS.POPPINS['400-medium']}
+      }
+
+      p {
+        ${({ theme }) => theme.FONTS.ROBOTO['100-regular']}
+      }
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    height: 26rem;
+
     justify-content: flex-end;
 
     img {
@@ -83,12 +107,11 @@ export const HeroContent = styled.div`
     }
 
     div {
-      width: 42.1rem;
+      right: 8rem;
 
       h1 {
         ${({ theme }) => theme.FONTS.POPPINS['500-medium']}
       }
-
       p {
         ${({ theme }) => theme.FONTS.ROBOTO['200-regular']}
       }
