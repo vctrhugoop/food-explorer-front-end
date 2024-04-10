@@ -9,8 +9,8 @@ export const MenuMobileContainer = styled.div`
 
   background-color: ${({ theme }) => theme.COLORS.DARK['400']};
 
-  transform: ${({ isOpenMenu }) =>
-    isOpenMenu ? 'translateX(0)' : 'translateX(-100%)'};
+  transform: ${({ $isopenmenu }) =>
+    $isopenmenu ? 'translateX(0)' : 'translateX(-100%)'};
 
   transition: transform 0.3s ease-in-out;
 

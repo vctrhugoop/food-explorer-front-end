@@ -31,7 +31,7 @@ export function Home() {
       <HeroContainer>
         <HeroContent>
           <picture>
-            <source srcset={heroImageDesktop} media='(min-width: 768px)' />
+            <source srcSet={heroImageDesktop} media='(min-width: 768px)' />
             <img src={heroImageMobile} />
           </picture>
 
