@@ -11,7 +11,7 @@ import {
 
 export function MenuMobile({ closeMenuMobile, isOpenMenu, signOut }) {
   return (
-    <MenuMobileContainer isOpenMenu={isOpenMenu}>
+    <MenuMobileContainer $isopenmenu={isOpenMenu}>
       <MenuMobileHeader>
         <ButtonMenu onClick={closeMenuMobile}>
           <X size={24} />
