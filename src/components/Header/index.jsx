@@ -27,7 +27,7 @@ export function Header() {
   return (
     <>
       <MenuMobile
-        $isopenmenu={openMenuMobile}
+        isOpenMenu={openMenuMobile}
         closeMenuMobile={handleToggleMenuMobile}
         signOut={signOut}
       />
