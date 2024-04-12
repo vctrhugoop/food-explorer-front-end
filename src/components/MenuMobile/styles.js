@@ -51,18 +51,28 @@ export const MenuMobileContent = styled.div`
   }
 
   nav {
-    padding: 1rem;
-
-    border-bottom: 1px solid ${({ theme }) => theme.COLORS.DARK['1000']};
+    display: flex;
+    flex-direction: column;
 
     button {
+      text-align: left;
+      width: 100%;
       ${({ theme }) => theme.FONTS.POPPINS['300-regular']};
+
+      color: ${({ theme }) => theme.COLORS.LIGHT['300']};
 
       font-weight: 300;
 
       cursor: pointer;
 
       background-color: transparent;
+      padding: 1rem;
+
+      border-bottom: 1px solid ${({ theme }) => theme.COLORS.DARK['1000']};
+
+      a {
+        color: ${({ theme }) => theme.COLORS.LIGHT['300']};
+      }
     }
   }
 `;

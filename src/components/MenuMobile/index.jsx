@@ -33,6 +33,9 @@ export function MenuMobile({ closeMenuMobile, isOpenMenu, signOut }) {
           />
         </SearchInput>
         <nav>
+          <button>
+            <a href='/new-dish'>Novo Prato</a>
+          </button>
           <button onClick={signOut}>Sair</button>
         </nav>
       </MenuMobileContent>
